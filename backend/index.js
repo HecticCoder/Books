@@ -25,7 +25,7 @@ app.use("/books", bookstore);
 
 mongoose
   .connect(
-    "mongodb+srv://aakash:pwd24@bookstore.7vldl.mongodb.net/?retryWrites=true&w=majority&appName=bookstore"
+    `mongodb+srv://${process.env.UserName}:${process.env.pwd}@bookstore.7vldl.mongodb.net/?retryWrites=true&w=majority&appName=bookstore`
   )
   .then(() => {
     console.log("App connected to MongoDB Database");
